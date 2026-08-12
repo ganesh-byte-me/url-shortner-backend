@@ -4,6 +4,7 @@ import cors from 'cors';
 import { apiLimiter } from './middlewares/rate-limit.middleware.js';
 import { errorHandler } from './middlewares/error.middleware.js';
 const app = express();
+app.set("trust proxy", 1);
 
 app.use(express.json());
 app.use(cors());
